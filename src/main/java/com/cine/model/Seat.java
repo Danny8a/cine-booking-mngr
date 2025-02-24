@@ -17,11 +17,14 @@ public class Seat {
     private Long id;
 
     @Column(nullable = false)
-    private String seatNumber;
+    private String seat_row;
 
-    private Boolean isAvailable = true;
+    @Column(nullable = false)
+    private String seat_column;
 
-    @ManyToOne
+    private Boolean available = true;
+
+    @OneToOne
     @JoinColumn(name = "theater_id", nullable = false)
-    private Theater theater;
+    private Movie movie;
 }

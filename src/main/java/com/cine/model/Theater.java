@@ -3,8 +3,6 @@ package com.cine.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "theaters")
 @Getter
@@ -25,7 +23,4 @@ public class Theater {
     @ManyToOne
     @JoinColumn(name = "movie_id", nullable = false)
     private Movie movie;
-
-    @OneToMany(mappedBy = "theater", cascade = CascadeType.ALL)
-    private List<Seat> seats;
 }

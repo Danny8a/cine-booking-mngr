@@ -26,8 +26,10 @@ public class Booking {
     @JoinColumn(name = "seat_id", nullable = false)
     private Seat seat;
 
+    @ManyToOne
+    @JoinColumn(name = "movie_id", nullable = false)
+    private Movie movie;
+
     @Column(nullable = false)
     private LocalDateTime bookingTime;
-
 }
-

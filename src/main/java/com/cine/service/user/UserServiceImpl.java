@@ -1,4 +1,4 @@
-package com.cine.service;
+package com.cine.service.user;
 
 import com.cine.model.User;
 import com.cine.repository.UserRepository;
